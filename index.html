@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vavenili – polska akademia grooming'u. Nowoczesna edukacja w sztuce pielęgnacji zwierząt.">
+    <title>vavenili — Academia Grooming'u</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating Navigation Dock -->
+    <nav class="nav-dock">
+        <div class="nav-indicator"></div>
+        <a href="#section-1" class="nav-item" data-section="1" title="Intro">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+            </svg>
+            <span class="nav-label">Intro</span>
+        </a>
+        <a href="#section-2" class="nav-item" data-section="2" title="Akademia">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2L2 7v10c0 5 10 10 10 10s10-5 10-10V7l-10-5z"/>
+            </svg>
+            <span class="nav-label">Akademia</span>
+        </a>
+        <a href="#section-3" class="nav-item" data-section="3" title="Kursy">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <line x1="9" y1="9" x2="15" y2="9"/>
+                <line x1="9" y1="15" x2="15" y2="15"/>
+            </svg>
+            <span class="nav-label">Kursy</span>
+        </a>
+        <a href="#section-4" class="nav-item" data-section="4" title="Ścieżka">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 12h18M18 9l3 3-3 3"/>
+            </svg>
+            <span class="nav-label">Ścieżka</span>
+        </a>
+        <a href="#section-6" class="nav-item" data-section="6" title="Pracownia">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M2 17h20"/>
+            </svg>
+            <span class="nav-label">Pracownia</span>
+        </a>
+        <a href="#section-7" class="nav-item" data-section="7" title="FAQ">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <text x="12" y="16" font-size="12" text-anchor="middle" dy="0.3em">?</text>
+            </svg>
+            <span class="nav-label">FAQ</span>
+        </a>
+        <a href="#section-8" class="nav-item" data-section="8" title="Kontakt">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 8l9-5 9 5v10c0 2-2 4-4 4H7c-2 0-4-2-4-4V8z"/>
+            </svg>
+            <span class="nav-label">Kontakt</span>
+        </a>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-logo">
+            <div class="logo-text">vavenili</div>
+        </div>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Fullscreen Navigation Overlay -->
+    <div class="nav-overlay" id="navOverlay">
+        <button class="nav-overlay-close">&times;</button>
+        <div class="nav-overlay-content">
+            <nav class="nav-overlay-menu">
+                <a href="#section-3" class="nav-overlay-link" data-target="section-3">Programy</a>
+                <a href="#section-2" class="nav-overlay-link" data-target="section-2">Akademia</a>
+                <a href="#section-4" class="nav-overlay-link" data-target="section-4">Proces nauki</a>
+                <a href="#section-6" class="nav-overlay-link" data-target="section-6">Pracownia</a>
+                <a href="#section-7" class="nav-overlay-link" data-target="section-7">FAQ</a>
+                <a href="#section-8" class="nav-overlay-link" data-target="section-8">Kontakt</a>
+            </nav>
+            <div class="nav-overlay-preview" id="navPreview"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- SECTION 1: Immersive Intro -->
+        <section id="section-1" class="section section-intro">
+            <div class="intro-container">
+                <div class="intro-left">
+                    <div class="intro-headline">
+                        <h1 class="headline-serif">
+                            Sztuka<br>
+                            <span class="highlight">precyzji</span><br>
+                            i piękna
+                        </h1>
+                    </div>
+                    <div class="intro-illustration">
+                        <svg class="scissors-icon" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <pattern id="furTexture" patternUnits="userSpaceOnUse" width="4" height="4">
+                                    <line x1="0" y1="0" x2="4" y2="4" stroke="#8A8178" stroke-width="0.5" opacity="0.3"/>
+                                </pattern>
+                            </defs>
+                            <!-- Decorative scissors illustration -->
+                            <g opacity="0.4">
+                                <path d="M 50 80 Q 80 60 100 100 Q 80 140 50 120" stroke="#5C4A3D" stroke-width="2" fill="none"/>
+                                <path d="M 150 80 Q 120 60 100 100 Q 120 140 150 120" stroke="#5C4A3D" stroke-width="2" fill="none"/>
+                                <circle cx="60" cy="80" r="8" fill="none" stroke="#5C4A3D" stroke-width="1.5"/>
+                                <circle cx="140" cy="80" r="8" fill="none" stroke="#5C4A3D" stroke-width="1.5"/>
+                            </g>
+                            <!-- Fur texture element -->
+                            <rect width="200" height="300" fill="url(#furTexture)"/>
+                            <!-- Decorative curved lines -->
+                            <path d="M 30 200 Q 100 180 170 200" stroke="#5C4A3D" stroke-width="1" fill="none" opacity="0.2"/>
+                            <path d="M 40 220 Q 100 240 160 220" stroke="#5C4A3D" stroke-width="1" fill="none" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <div class="intro-micro-labels">
+                        <div class="micro-label">
+                            <span class="micro-accent">—</span> edukacja oparta na doświadczeniu
+                        </div>
+                        <div class="micro-label">
+                            <span class="micro-accent">—</span> zaawansowane techniki międzynarodowe
+                        </div>
+                        <div class="micro-label">
+                            <span class="micro-accent">—</span> spersonalizowana ścieżka nauki
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="intro-right">
+                    <div class="intro-image-stack">
+                        <div class="image-frame frame-1">
+                            <div class="image-placeholder">
+                                <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="500" fill="#EAE3D8"/>
+                                    <circle cx="200" cy="250" r="120" fill="#5C4A3D" opacity="0.1"/>
+                                    <text x="200" y="250" text-anchor="middle" dy="0.3em" font-size="14" fill="#8A8178">Studio fotograficzne</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="image-frame frame-2">
+                            <div class="image-placeholder">
+                                <svg viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="300" height="350" fill="#F6F2EC"/>
+                                    <circle cx="150" cy="175" r="80" fill="#8A8178" opacity="0.08"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="image-frame frame-3">
+                            <div class="image-placeholder">
+                                <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="280" height="280" fill="#EAE3D8" rx="20"/>
+                                    <circle cx="140" cy="140" r="60" fill="#5C4A3D" opacity="0.1"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="intro-cards">
+                        <div class="info-card card-1">
+                            <h3 class="card-title">Absolwenci</h3>
+                            <p class="card-number">320+</p>
+                        </div>
+                        <div class="info-card card-2">
+                            <h3 class="card-title">Lat doświadczenia</h3>
+                            <p class="card-number">12</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-dot"></div>
+                <span class="scroll-text">Odkryj</span>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Typography Story Block -->
+        <section id="section-2" class="section section-philosophy">
+            <div class="philosophy-container">
+                <div class="philosophy-divider"></div>
+                <h2 class="philosophy-headline">
+                    Edukacja to relacja między<br>
+                    <span class="text-thin">nauczycielem, uczniem i zwierzęciem</span>
+                </h2>
+                <p class="philosophy-text">
+                    W vavenili uczymy nie tylko technik. Uczymy zrozumienia, precyzji, cierpliwości 
+                    i głębokie szacunku do każdego zwierzęcia. Nasza metodologia łączy zaawansowaną 
+                    wiedzę branżową z psychologią behawioralną psów i kotów, tworząc holistyczne podejście 
+                    do grooming'u.
+                </p>
+                <p class="philosophy-text">
+                    Każdy warsztat, każda lekcja, każda praktyka projektowana jest do tego, aby osiągać 
+                    perfekcję przy jednoczesnym zachowaniu dobrostanu zwierząt. To jest nasza misja.
+                </p>
+                <div class="philosophy-divider"></div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Course Architecture -->
+        <section id="section-3" class="section section-courses">
+            <div class="courses-header">
+                <h2 class="section-title">Programy nauki</h2>
+                <p class="section-subtitle">Zaawansowana edukacja dostosowana do Twojego poziomu</p>
+            </div>
+            
+            <div class="courses-grid">
+                <div class="course-card card-large">
+                    <div class="course-icon">
+                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="40" cy="40" r="35" fill="none" stroke="#5C4A3D" stroke-width="1.5" opacity="0.3"/>
+                            <path d="M 25 40 Q 40 25 55 40 Q 40 55 25 40" fill="#5C4A3D" opacity="0.1"/>
+                            <circle cx="40" cy="40" r="8" fill="#5C4A3D" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <h3 class="course-title">Grooming Początkujący</h3>
+                    <p class="course-desc">Fundamenty sztuki. Narzędzia, bezpieczeństwo, podstawowe techniki mycia, suszenia i strzyżenia.</p>
+                    <div class="course-meta">8 tygodni • 32 godziny praktyki</div>
+                </div>
+
+                <div class="course-card card-medium">
+                    <div class="course-icon">
+                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 20 50 L 40 20 L 60 50 L 50 50 L 50 60 L 30 60 L 30 50 Z" fill="none" stroke="#5C4A3D" stroke-width="1.5" opacity="0.3"/>
+                            <line x1="40" y1="20" x2="40" y2="35" stroke="#5C4A3D" stroke-width="1" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <h3 class="course-title">Styling Ras</h3>
+                    <p class="course-desc">Specjalizacja w stylizacji rasowych. Standarty, anatomia, indywidualne cechy.</p>
+                    <div class="course-meta">10 tygodni</div>
+                </div>
+
+                <div class="course-card card-small">
+                    <div class="course-icon">
+                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="40" cy="40" r="25" fill="none" stroke="#5C4A3D" stroke-width="1.5" opacity="0.3"/>
+                            <path d="M 40 20 A 20 20 0 0 1 60 40" fill="none" stroke="#5C4A3D" stroke-width="2" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <h3 class="course-title">Higiena Salonu</h3>
+                    <p class="course-desc">Procedury, standardy bezpieczeństwa, zarządzanie.</p>
+                </div>
+
+                <div class="course-card card-medium-alt">
+                    <div class="course-icon">
+                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="20" y="25" width="40" height="30" rx="3" fill="none" stroke="#5C4A3D" stroke-width="1.5" opacity="0.3"/>
+                            <line x1="30" y1="25" x2="30" y2="55" stroke="#5C4A3D" stroke-width="1" opacity="0.2"/>
+                            <line x1="50" y1="25" x2="50" y2="55" stroke="#5C4A3D" stroke-width="1" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <h3 class="course-title">Praktyka Zaawansowana</h3>
+                    <p class="course-desc">Praca z modelami. Projektowanie sesji. Budowanie portfolio zawodowego.</p>
+                    <div class="course-meta">12 tygodni • 48 godzin</div>
+                </div>
+
+                <div class="course-card card-small-alt">
+                    <div class="course-icon">
+                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 40 15 L 50 35 L 70 35 L 55 50 L 60 70 L 40 55 L 20 70 L 25 50 L 10 35 L 30 35 Z" fill="none" stroke="#5C4A3D" stroke-width="1.5" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h3 class="course-title">Behawior Zwierząt</h3>
+                    <p class="course-desc">Psychologia psów. Mowa ciała. Obsługa zwierząt nerwowych.</p>
+                </div>
+
+                <div class="course-card card-large-alt">
+                    <div class="course-icon">
+                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 20 30 Q 40 15 60 30 Q 60 45 40 60 Q 20 45 20 30" fill="none" stroke="#5C4A3D" stroke-width="1.5" opacity="0.3"/>
+                            <line x1="40" y1="30" x2="40" y2="50" stroke="#5C4A3D" stroke-width="1" opacity="0.2"/>
+                        </svg>
+                    </div>
+                    <h3 class="course-title">Teoria Pokryw Włosowych</h3>
+                    <p class="course-desc">Struktura włosa. Typy sierści. Zabiegi pielęgnacyjne. Profesjonalne produkty kosmetyczne dla psów.</p>
+                    <div class="course-meta">6 tygodni</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Learning Flow -->
+        <section id="section-4" class="section section-flow">
+            <div class="flow-header">
+                <h2 class="section-title">Twoja ścieżka nauki</h2>
+                <p class="section-subtitle">Strukturyzowany proces od pierwszego dnia do certyfikacji</p>
+            </div>
+            
+            <div class="flow-container">
+                <div class="flow-timeline">
+                    <div class="flow-step" data-step="1">
+                        <div class="flow-node">
+                            <div class="node-number">01</div>
+                        </div>
+                        <div class="flow-content">
+                            <h3>Rekrutacja</h3>
+                            <p>Ocena umiejętności, rozmowa kwalifikacyjna, ustalenie poziomu startowego.</p>
+                        </div>
+                    </div>
+
+                    <div class="flow-connector"></div>
+
+                    <div class="flow-step" data-step="2">
+                        <div class="flow-node">
+                            <div class="node-number">02</div>
+                        </div>
+                        <div class="flow-content">
+                            <h3>Konsultacja Edukacyjna</h3>
+                            <p>Spersonalizowany plan nauki dostosowany do Twoich celów i doświadczenia.</p>
+                        </div>
+                    </div>
+
+                    <div class="flow-connector"></div>
+
+                    <div class="flow-step" data-step="3">
+                        <div class="flow-node">
+                            <div class="node-number">03</div>
+                        </div>
+                        <div class="flow-content">
+                            <h3>Zajęcia Praktyczne</h3>
+                            <p>Intensywne warsztaty w naszej pracowni ze sprzętem profesjonalnym.</p>
+                        </div>
+                    </div>
+
+                    <div class="flow-connector"></div>
+
+                    <div class="flow-step" data-step="4">
+                        <div class="flow-node">
+                            <div class="node-number">04</div>
+                        </div>
+                        <div class="flow-content">
+                            <h3>Praca z Modelami</h3>
+                            <p>Praktyka z rzeczywistymi zwierzętami. Budowanie doświadczenia w warunkach salonu.</p>
+                        </div>
+                    </div>
+
+                    <div class="flow-connector"></div>
+
+                    <div class="flow-step" data-step="5">
+                        <div class="flow-node">
+                            <div class="node-number">05</div>
+                        </div>
+                        <div class="flow-content">
+                            <h3>Portfolio i Case Study</h3>
+                            <p>Dokumentacja pracy. Przygotowanie portfolio zawodowego do portfolio.</p>
+                        </div>
+                    </div>
+
+                    <div class="flow-connector"></div>
+
+                    <div class="flow-step" data-step="6">
+                        <div class="flow-node">
+                            <div class="node-number">06</div>
+                        </div>
+                        <div class="flow-content">
+                            <h3>Certyfikat Ukończenia</h3>
+                            <p>Międzynarodowo uznawane zaświadczenie umiejętności i kompetencji.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Gallery -->
+        <section id="section-5" class="section section-gallery">
+            <div class="gallery-header">
+                <h2 class="section-title">Proces edukacji</h2>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item item-hero">
+                    <div class="gallery-image">
+                        <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="galleryGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#EAE3D8;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#F6F2EC;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="800" height="500" fill="url(#galleryGrad1)"/>
+                            <circle cx="400" cy="250" r="150" fill="#5C4A3D" opacity="0.08"/>
+                            <text x="400" y="250" text-anchor="middle" dy="0.3em" font-size="18" fill="#8A8178">Pracownia grooming'u</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item item-portrait">
+                    <div class="gallery-image">
+                        <svg viewBox="0 0 350 450" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="350" height="450" fill="#F6F2EC"/>
+                            <circle cx="175" cy="180" r="70" fill="#8A8178" opacity="0.1"/>
+                            <rect x="100" y="280" width="150" height="120" rx="8" fill="#EAE3D8" opacity="0.5"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item item-small">
+                    <div class="gallery-image">
+                        <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="280" height="280" fill="#EAE3D8" rx="16"/>
+                            <circle cx="140" cy="140" r="60" fill="#5C4A3D" opacity="0.08"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item item-medium">
+                    <div class="gallery-image">
+                        <svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="320" fill="#F6F2EC"/>
+                            <rect x="50" y="60" width="300" height="200" fill="#EAE3D8" opacity="0.6" rx="8"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item item-small-alt">
+                    <div class="gallery-image">
+                        <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="120" cy="120" r="120" fill="#EAE3D8"/>
+                            <circle cx="120" cy="120" r="80" fill="#5C4A3D" opacity="0.08"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="gallery-item item-wide">
+                    <div class="gallery-image">
+                        <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="600" height="300" fill="#EAE3D8"/>
+                            <path d="M 0 150 Q 150 100 300 150 T 600 150" fill="none" stroke="#5C4A3D" stroke-width="2" opacity="0.1"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Educational Space -->
+        <section id="section-6" class="section section-studio">
+            <div class="studio-header">
+                <h2 class="section-title text-light">Nasza pracownia</h2>
+                <p class="section-subtitle text-light">Profesjonalne stanowiska. Międzynarodowy sprzęt. Optymalne warunki nauki.</p>
+            </div>
+            
+            <div class="studio-container">
+                <div class="studio-image">
+                    <svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="studioGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3A3530;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#2A2623;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="1000" height="600" fill="url(#studioGrad)"/>
+                        <circle cx="500" cy="300" r="200" fill="#5C4A3D" opacity="0.1"/>
+                        <text x="500" y="300" text-anchor="middle" dy="0.3em" font-size="20" fill="#8A8178">Przestrzeń grooming'u</text>
+                    </svg>
+                </div>
+
+                <div class="studio-info-overlay">
+                    <div class="studio-info-item">
+                        <div class="info-point">Stanowiska</div>
+                        <p>8 w pełni wyposażonych stanowisk grooming'u z profesjonalnym oświetleniem</p>
+                    </div>
+                    <div class="studio-info-item">
+                        <div class="info-point">Suszarnie</div>
+                        <p>Zaawansowana wentylacja i kontrola temperatury dla bezpieczeństwa zwierząt</p>
+                    </div>
+                    <div class="studio-info-item">
+                        <div class="info-point">Kwarantanna</div>
+                        <p>Izolowana przestrzeń dla zwierząt wymagających specjalnej opieki</p>
+                    </div>
+                    <div class="studio-info-item">
+                        <div class="info-point">Biblioteka</div>
+                        <p>Zasoby edukacyjne, czasopisma branżowe, katalogi standardów ras</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: FAQ Accordion -->
+        <section id="section-7" class="section section-faq">
+            <div class="faq-header">
+                <h2 class="section-title">Pytania i odpowiedzi</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span class="faq-question">Jaki jest wymagany poziom doświadczenia?</span>
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Nasze programy są dostosowane do wszystkich poziomów. Oferujemy kursy dla początkujących bez doświadczenia, ale także zaawansowane ścieżki dla profesjonalistów chcących specjalizacji. Każdy uczestnik przechodzi ocenę wstępną, na podstawie której dostosowujemy plan nauki.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span class="faq-question">Jak długo trwa kursu podstawowy?</span>
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Kurs podstawowy trwa 8 tygodni i obejmuje 32 godziny zajęć praktycznych. Zajęcia odbywają się 2-3 razy w tygodniu, co pozwala na równoważenie nauki z pracą zawodową. Możliwe są również intensywne warianty trwające 4 tygodnie.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span class="faq-question">Czy certyfikat jest uznawany międzynarodowo?</span>
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Tak. Nasze zaświadczenia są wydawane zgodnie z międzynarodowymi standardami IIGA (International Institute of Grooming Arts) i są uznawane w krajach Unii Europejskiej oraz poza nią. Posiadacze certyfikatów mogą pracować w salonach grooming'u na całym świecie.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span class="faq-question">Czy mogę pracować z własnymi modelami zwierząt?</span>
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Oczywiście! W rzeczywistości zachęcamy naszych studentów do pracy z własnymi zwierzętami lub zwierzętami swoich rodzin. Oferujemy również możliwość współpracy z naszymi modelami treningowymi w dedykowanych sesjach, aby zbudować doświadczenie w obsłudze różnych ras i temperamentów.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span class="faq-question">Jakie są możliwości zatrudnienia po ukończeniu?</span>
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Współpracujemy z sieciami salonów grooming'u, które aktywnie zatrudniają naszych absolwentów. Oferujemy również wsparcie w założeniu własnej działalności grooming'u, w tym doradztwo biznesowe i marketing. Większość naszych absolwentów pracuje jako niezależni groomerzy lub właściciele salonów w ciągu 6 miesięcy.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span class="faq-question">Ile kosztują kursy?</span>
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Ceny zaczynają się od 1,499 PLN za kurs podstawowy 8-tygodniowy. Kursy specjalizacyjne wahają się od 999 do 2,499 PLN. Oferujemy plany płatności i możliwości finansowania dla kwalifikowanych kandydatów. Skontaktuj się bezpośrednio, aby uzyskać aktualne wyceny i dostępne promocje.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span class="faq-question">Czy mogę uczestniczyć w zajęciach zdalnie?</span>
+                        <span class="faq-icon"></span>
+                    </button>
+                    <div class="faq-content">
+                        <p>Część naszych zajęć jest dostępna online (teoria, anatomia, psychologia behawioralna). Jednak praktyka grooming'u wymaga fizycznej obecności w naszej pracowni z rzeczywistymi zwierzętami i sprzętem. Oferujemy modele hybrydowe łączące nagrania online z intensywnymi sesjami praktycznymi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: Contact -->
+        <section id="section-8" class="section section-contact">
+            <div class="contact-container">
+                <div class="contact-left">
+                    <h2 class="contact-headline">
+                        Dołącz do vavenili<br>
+                        <span class="text-thin">i odkryj swoją pasję do grooming'u</span>
+                    </h2>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <h4>Telefon</h4>
+                            <p><a href="tel:+48517284913">+48 517 284 913</a></p>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>E-mail</h4>
+                            <p><a href="mailto:kontakt@vavenili.pl">kontakt@vavenili.pl</a></p>
+                        </div>
+                        <div class="contact-detail">
+                            <h4>Adres</h4>
+                            <p>ul. Grodzka 41<br>31-044 Kraków, Polska</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Imię</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Numer telefonu</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Adres e-mail</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Wiadomość</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Wyślij wiadomość</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">vavenili</div>
+            <div class="footer-links">
+                <button class="footer-link" id="privacyLink">Polityka prywatności</button>
+                <button class="footer-link" id="termsLink">Warunki użytkowania</button>
+            </div>
+            <div class="footer-copyright">
+                © 2026 vavenili. Wszystkie prawa zastrzeżone.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal" id="privacyModal">
+        <div class="modal-backdrop" id="privacyBackdrop"></div>
+        <div class="modal-content modal-legal">
+            <button class="modal-close">&times;</button>
+            <div class="modal-sidebar">
+                <nav class="modal-nav">
+                    <a href="#privacy-admin" class="modal-nav-link active">Administrator</a>
+                    <a href="#privacy-data-types" class="modal-nav-link">Rodzaje danych</a>
+                    <a href="#privacy-forms" class="modal-nav-link">Formularze</a>
+                    <a href="#privacy-cookies" class="modal-nav-link">Cookies</a>
+                    <a href="#privacy-legal-basis" class="modal-nav-link">Podstawy prawne</a>
+                    <a href="#privacy-storage" class="modal-nav-link">Przechowywanie</a>
+                    <a href="#privacy-rights" class="modal-nav-link">Prawa użytkownika</a>
+                    <a href="#privacy-contact" class="modal-nav-link">Kontakt</a>
+                    <a href="#privacy-analytics" class="modal-nav-link">Analityka</a>
+                    <a href="#privacy-security" class="modal-nav-link">Bezpieczeństwo</a>
+                    <a href="#privacy-gdpr" class="modal-nav-link">RODO</a>
+                </nav>
+            </div>
+            <div class="modal-body modal-body-scroll">
+                <h2>Polityka Prywatności vavenili</h2>
+
+                <section id="privacy-admin">
+                    <h3>Administrator Danych Osobowych</h3>
+                    <p>Administratorem Twoich danych osobowych jest vavenili sp. z o.o., z siedzibą ul. Grodzka 41, 31-044 Kraków, Polska.</p>
+                    <p><strong>Kontakt administradora:</strong> kontakt@vavenili.pl, +48 517 284 913</p>
+                </section>
+
+                <section id="privacy-data-types">
+                    <h3>Rodzaje Zbieranych Danych</h3>
+                    <p>Zbieramy następujące kategorie danych osobowych:</p>
+                    <ul>
+                        <li>Dane identyfikacyjne (imię, nazwisko)</li>
+                        <li>Dane kontaktowe (adres e-mail, numer telefonu, adres)</li>
+                        <li>Dane edukacyjne (informacje o zainteresowaniu kursami, postęp nauki)</li>
+                        <li>Dane techniczne (adres IP, dane cookies, logi dostępu)</li>
+                    </ul>
+                </section>
+
+                <section id="privacy-forms">
+                    <h3>Przetwarzanie Danych z Formularzy</h3>
+                    <p>Dane zbierane poprzez formularz kontaktowy są przetwarzane w celu odpowiadania na zapytania, dostarczania informacji o kursach i utrzymywania kontaktu z potencjalnymi studentami.</p>
+                </section>
+
+                <section id="privacy-cookies">
+                    <h3>Pliki Cookies</h3>
+                    <p>Nasza strona internetowa wykorzystuje pliki cookies do celów funkcjonalnych i analitycznych. Cookies te pomagają nam zrozumieć jak użytkownicy korzystają z naszej strony, aby móc ją ulepszyć.</p>
+                </section>
+
+                <section id="privacy-legal-basis">
+                    <h3>Podstawy Prawne Przetwarzania</h3>
+                    <p>Przetwarzanie danych osobowych odbywa się na podstawie:</p>
+                    <ul>
+                        <li>Twojej zgody (art. 6 ust. 1 lit. a RODO)</li>
+                        <li>Realizacji umowy (art. 6 ust. 1 lit. b RODO)</li>
+                        <li>Obowiązków prawnych (art. 6 ust. 1 lit. c RODO)</li>
+                        <li>Uzasadnionych interesów (art. 6 ust. 1 lit. f RODO)</li>
+                    </ul>
+                </section>
+
+                <section id="privacy-storage">
+                    <h3>Okres Przechowywania Danych</h3>
+                    <p>Dane osobowe przechowywane są przez okres niezbędny do realizacji celów, dla których zostały zebrane, nie dłużej niż 3 lata od ostatniego kontaktu, chyba że obowiązujące przepisy wymagają dłuższego przechowywania.</p>
+                </section>
+
+                <section id="privacy-rights">
+                    <h3>Twoje Prawa</h3>
+                    <p>Masz prawo do:</p>
+                    <ul>
+                        <li>Dostępu do swoich danych osobowych</li>
+                        <li>Sprostowania danych</li>
+                        <li>Usunięcia danych (prawo do bycia zapomnianym)</li>
+                        <li>Ograniczenia przetwarzania</li>
+                        <li>Przenoszenia danych</li>
+                        <li>Wycofania zgody na przetwarzanie</li>
+                        <li>Wniesienia sprzeciwu</li>
+                    </ul>
+                </section>
+
+                <section id="privacy-contact">
+                    <h3>Kontakt Administradora</h3>
+                    <p>Jeśli chcesz realizować swoje prawa lub masz pytania dotyczące przetwarzania danych, skontaktuj się z nami:</p>
+                    <p><strong>E-mail:</strong> kontakt@vavenili.pl<br>
+                    <strong>Telefon:</strong> +48 517 284 913<br>
+                    <strong>Adres:</strong> ul. Grodzka 41, 31-044 Kraków, Polska</p>
+                </section>
+
+                <section id="privacy-analytics">
+                    <h3>Technologie Analityczne</h3>
+                    <p>Strona wykorzystuje narzędzia do analizy ruchu, takie jak Google Analytics, które pomagają nam zrozumieć zachowanie użytkowników i optymalizować doświadczenie na stronie.</p>
+                </section>
+
+                <section id="privacy-security">
+                    <h3>Bezpieczeństwo Danych</h3>
+                    <p>Wdrażamy odpowiednie środki techniczne i organizacyjne w celu zabezpieczenia danych osobowych przed nieuprawnionym dostępem, zmianą, utratą lub zniszczeniem. Dane są przesyłane z wykorzystaniem szyfrowania SSL/TLS.</p>
+                </section>
+
+                <section id="privacy-gdpr">
+                    <h3>Zgodność z RODO</h3>
+                    <p>Przetwarzanie danych osobowych prowadzone jest w pełnej zgodzie z Rozporządzeniem (UE) 2016/679 Parlamentu Europejskiego i Rady z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych (RODO).</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Use Modal -->
+    <div class="modal" id="termsModal">
+        <div class="modal-backdrop" id="termsBackdrop"></div>
+        <div class="modal-content modal-legal modal-terms">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body modal-body-scroll">
+                <h2>Warunki Użytkowania</h2>
+
+                <section>
+                    <h3>1. Warunki Korzystania</h3>
+                    <p>Korzystając z niniejszej strony internetowej i usług vavenili, wyrażasz zgodę na przestrzeganie wszystkich poniższych warunków. Jeśli się z nimi nie zgadzasz, prosimy o niekorzystanie z naszych usług.</p>
+                </section>
+
+                <section>
+                    <h3>2. Odpowiedzialność Użytkownika</h3>
+                    <p>Użytkownik zobowiązuje się do korzystania ze strony w zgodzie z obowiązującym prawem i niniejszymi warunkami. Użytkownik odpowiada za wszystkie czynności podjęte za pośrednictwem swojego konta.</p>
+                </section>
+
+                <section>
+                    <h3>3. Zasady Kontaktu</h3>
+                    <p>Komunikując się z nami poprzez formularz kontaktowy lub inne kanały, oświadczasz, że posiadasz uprawnienia do używania tych danych kontaktowych i wyrażasz zgodę na otrzymanie odpowiedzi.</p>
+                </section>
+
+                <section>
+                    <h3>4. Informacje Edukacyjne</h3>
+                    <p>Wszystkie informacje na temat kursów, programów i usług edukacyjnych są dostarczane do celów informacyjnych. Szczegóły programu mogą ulec zmianom. Prosimy o kontakt w celu uzyskania aktualnych informacji.</p>
+                </section>
+
+                <section>
+                    <h3>5. Prawa Autorskie</h3>
+                    <p>Wszelkie treści dostępne na stronie, w tym teksty, obrazy, grafiki, logo i opis kursów, są własnością vavenili i chronione prawami autorskimi. Niedozwolone jest kopiowanie, rozpowszechnianie lub wykorzystywanie treści bez pisemnej zgody.</p>
+                </section>
+
+                <section>
+                    <h3>6. Ograniczenia Odpowiedzialności</h3>
+                    <p>vavenili nie ponosi odpowiedzialności za:</p>
+                    <ul>
+                        <li>Przerwy w dostępności strony</li>
+                        <li>Błędy lub nieścisłości w treści</li>
+                        <li>Utratę danych lub przerwę w transmisji</li>
+                        <li>Straty finansowe wynikające z korzystania ze strony</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>7. Formularze Zgłoszeniowe</h3>
+                    <p>Jeśli masz pytania lub chcesz zgłosić problem, skontaktuj się z nami poprzez formularz kontaktowy. Zobowiązujemy się do odpowiedzi w ciągu 48 godzin.</p>
+                </section>
+
+                <section>
+                    <h3>8. Postanowienia Końcowe</h3>
+                    <p>Niniejsze warunki stanowią całą umowę między Tobą a vavenili. Jeśli jakakolwiek część tych warunków zostanie uznana za nieważną, pozostałe warunki pozostają w mocy.</p>
+                </section>
+
+                <section>
+                    <h3>9. Prawo Mające Zastosowanie</h3>
+                    <p>Niniejsze warunki podlegają prawu polskiemu i są interpretowane zgodnie z przepisami obowiązującymi na terenie Rzeczypospolitej Polskiej.</p>
+                </section>
+
+                <section>
+                    <h3>10. Kontakt w Sprawach Warunków</h3>
+                    <p>Jeśli masz pytania dotyczące niniejszych warunków, skontaktuj się z nami:</p>
+                    <p><strong>E-mail:</strong> kontakt@vavenili.pl<br>
+                    <strong>Telefon:</strong> +48 517 284 913</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
